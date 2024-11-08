@@ -1,0 +1,34 @@
+SIMULADOR DE NICHOS PARA SERVICIOS DE REDES SOCIALES
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador de Nicho</title>
+</head>
+<body>
+    <div class="simulator">
+        <label>Área de Interés:</label>
+        <input type="text" id="interes" placeholder="Ej. moda, restaurantes, fitness">
+
+        <label>Experiencia:</label>
+        <input type="text" id="experiencia" placeholder="Ej. marketing, diseño, ventas">
+
+        <button onclick="sugerirNicho()">Sugerir Nicho</button>
+
+        <div class="result">
+            <p><strong>Nicho Ideal:</strong> <span id="nicho"></span></p>
+        </div>
+    </div>
+
+    <script>
+        function sugerirNicho() {
+            const interes = document.getElementById("interes").value;
+            const experiencia = document.getElementById("experiencia").value;
+            const nicho = `Tu nicho ideal podría ser la gestión de redes para negocios en ${interes} aprovechando tu experiencia en ${experiencia}.`;
+            document.getElementById("nicho").innerText = nicho;
+        }
+    </script>
+</body>
+</html>
